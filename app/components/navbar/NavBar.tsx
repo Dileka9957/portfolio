@@ -9,10 +9,10 @@ export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("mt-10 mx-auto z-50 max-w-[480px]", className)}
+      className={cn("mt-10 mx-auto z-50 max-w-[460px] sm:max-w-[580px]", className)}
     >
       <Menu setActive={setActive}>
-      <Image
+        <Image
           className="dark:invert top-10"
           src="/next.svg"
           alt="Next.js logo"
@@ -20,16 +20,16 @@ export default function Navbar({ className }: { className?: string }) {
           height={28}
           priority
         />
-        <MenuItem setActive={setActive} active={active} item="Projects">
-          <div className="flex flex-col space-y-4 text-sm">
+        <MenuItem setActive={setActive} active={active} item="About">
+          {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Web Development</HoveredLink>
             <HoveredLink href="/interface-design">Interface Design</HoveredLink>
             <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
             <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
+          </div> */}
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="About">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+        <MenuItem setActive={setActive} active={active} item="Projects">
+          {/* <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Algochurn"
               href="https://algochurn.com"
@@ -54,15 +54,15 @@ export default function Navbar({ className }: { className?: string }) {
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
-          </div>
+          </div> */}
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contact">
-          <div className="flex flex-col space-y-4 text-sm">
+          {/* <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Hobby</HoveredLink>
             <HoveredLink href="/individual">Individual</HoveredLink>
             <HoveredLink href="/team">Team</HoveredLink>
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
+          </div> */}
         </MenuItem>
       </Menu>
     </div>

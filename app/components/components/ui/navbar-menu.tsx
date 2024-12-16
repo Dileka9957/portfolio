@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Typography } from "../../common/Typography";
 
 const transition = {
   type: "spring",
@@ -14,7 +15,7 @@ const transition = {
 };
 
 export const MenuItem = ({
-  setActive,
+  // setActive,
   active,
   item,
   children,
@@ -25,12 +26,14 @@ export const MenuItem = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div 
+    // onMouseEnter={() => setActive(item)} 
+    className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-[20px]"
       >
-        {item}
+       {item}
       </motion.p>
       {active !== null && (
         <motion.div
@@ -61,19 +64,18 @@ export const MenuItem = ({
 };
 
 export const Menu = ({
-  setActive,
   children,
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
 }) => {
   return (
-    <nav
-      onMouseLeave={() => setActive(null)} // resets the state
-      className="w-full relative rounded-full border border-transparent dark:bg-[#0a0a0a] bg-white shadow-input flex justify-center space-x-4 md:space-x-8 px-8 py-6 "
+    <div
+     
+      className="w-full rounded-full dark:bg-[#0a0a0a] bg-white flex flex-col items-center space-y-3 sm:space-y-2 sm:flex-row sm:justify-center sm:space-x-4 md:space-x-8 px-6 py-4 "
     >
       {children}
-    </nav>
+    </div>
   );
 };
 
