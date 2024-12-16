@@ -5,8 +5,6 @@ import { Button } from "@nextui-org/react";
 import { Typography } from "../common/Typography";
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
-
-
 export function Hero() {
 
   return (
@@ -26,16 +24,16 @@ export function Hero() {
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row sm:gap-3">
+        <div className="flex flex-col sm:flex-row sm:gap-3 mt-10">
           <Button 
-            className="bg-white text-xl py-2 mt-10 text-black rounded-full 
+            className="bg-white text-xl py-1 mt-10 text-black rounded-full 
                        border border-white hover:border-white 
                        focus:border-white active:border-white"
           >
-            Let&apos;s talk
+            Let&apos;s connect
           </Button>
           <Button 
-            className="text-xl py-2 mt-4 sm:mt-10 text-white rounded-full 
+            className="text-xl py-1 mt-4 sm:mt-10 text-white rounded-full 
                        border border-white border-opacity-50 hover:border-opacity-100 
                        focus:border-opacity-100 active:border-opacity-100"
           >

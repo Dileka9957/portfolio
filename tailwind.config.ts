@@ -20,8 +20,8 @@ export default {
       fontSize: {
         hero: `clamp(4rem, 1vw + 2.75rem, 5.375rem)`,
         hero_sm: `clamp(3rem, 2vw + 1rem, 4rem)`,
-        h1: `clamp(1.5rem, 2vw + 1rem, 1.875rem)`,
-        h1_sm: `clamp(1.5rem, 2vw + 1rem, 1.875rem)`,
+        h1: `clamp(2rem, 2vw + 1rem, 2.667rem)`,
+        h1_sm: `clamp(1rem, 2vw + 1rem, 2rem)`,
         h2: `clamp(1.5rem, 1vw + 1rem, 1.5rem);`,
         h2_sm: `clamp(1.286rem, 1vw + 1rem, 1.714rem)`,
         heading: `clamp(2.75rem, 3vw + 1rem, 3.5rem)`,
@@ -31,7 +31,7 @@ export default {
         heading3: `clamp(2.25rem, 2vw + 1rem, 2.75rem)`,
         heading3_sm: `clamp(1.75rem, 3vw + 1rem, 2.25rem)`,
         body: `clamp(1.333rem, 1vw + 1rem, 1.667rem)`,
-        body_sm: `clamp(1rem, 1vw + 1rem, 1.125rem)`,
+        body_sm: `clamp(1rem, 1vw + 1rem, 1.429rem)`,
       },
       animation: {
         first: "moveVertical 30s ease infinite",

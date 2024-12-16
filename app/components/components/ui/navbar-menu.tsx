@@ -29,12 +29,9 @@ export const MenuItem = ({
     <div 
     // onMouseEnter={() => setActive(item)} 
     className="relative ">
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-[20px]"
-      >
-       {item}
-      </motion.p>
+   
+        <Typography variant="body1" displayAs="p"  className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white">{item}</Typography>
+     
       {active !== null && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
@@ -52,7 +49,7 @@ export const MenuItem = ({
                   layout // layout ensures smooth animation
                   className="w-max h-full p-4"
                 >
-                  {children}
+                 {children}
                 </motion.div>
               </motion.div>
             </div>
