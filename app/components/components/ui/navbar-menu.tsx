@@ -33,7 +33,7 @@ export const MenuItem = ({
       <Typography
         variant="body2"
         displayAs="p"
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
       >
         {item}
       </Typography>
@@ -73,7 +73,7 @@ export const Menu = ({
   children: React.ReactNode
 }) => {
   return (
-    <div className="flex w-full flex-col items-center space-y-3 rounded-full bg-white px-6 py-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-2 md:space-x-8 dark:bg-[#0a0a0a]">
+    <div className="flex w-full flex-col items-center space-y-3 rounded-full bg-[#0a0a0a] px-6 py-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-2 md:space-x-8 dark:bg-[#0a0a0a]">
       {children}
     </div>
   )

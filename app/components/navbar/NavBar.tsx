@@ -10,7 +10,7 @@ export default function Navbar({ className }: { className?: string }) {
     <div className={cn('z-50 mx-auto mt-10 max-w-[460px] sm:max-w-[580px]', className)}>
       <Menu setActive={setActive}>
         <Image
-          className="top-10 dark:invert"
+          className="top-10 invert"
           src="/next.svg"
           alt="Next.js logo"
           width={120}

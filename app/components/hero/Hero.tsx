@@ -19,7 +19,7 @@ export function Hero() {
     <div className="">
       <div className="z-50 mt-20 flex w-full flex-col items-center justify-center px-4 text-center">
         <HeroHighlight>
-            <div className="space-y-3 text-4xl font-medium text-white md:text-5xl">
+          <div className="space-y-3 text-4xl font-medium text-white md:text-5xl">
             <Typography variant="hero" displayAs="h1" className="">
               Code, Create, Innovate:
             </Typography>
@@ -41,7 +41,7 @@ export function Hero() {
               }}
               className="mx-auto max-w-4xl px-4 text-center text-2xl font-bold leading-relaxed text-neutral-700 md:text-4xl lg:text-5xl lg:leading-snug dark:text-white"
             >
-              <Highlight className="text-black dark:text-white">Development Partner</Highlight>
+              <Highlight className="text-white dark:text-white">Development Partner</Highlight>
             </motion.h1>
           </div>
           <div className="mt-10 flex flex-col items-center justify-center sm:flex-row sm:gap-3">
@@ -51,7 +51,7 @@ export function Hero() {
             >
               Let&apos;s connect
             </Button>
-            <Button className="mt-4 rounded-full border border-white border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10">
+            <Button className="mt-4 rounded-full border border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10">
               Download my CV
             </Button>
           </div>
