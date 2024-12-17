@@ -3,9 +3,16 @@ import React from "react";
 import { Button } from "@nextui-org/react";
 // import confetti from "canvas-confetti";
 import { Typography } from "../common/Typography";
+import useScrollToSection from "../hooks/SmoothScroll";
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export function Hero() {
+
+  const { scrollToSection } = useScrollToSection();
+
+  function handleButtonPress() {
+    scrollToSection('contact', 2500);
+  }
 
   return (
     <div className="">
@@ -29,6 +36,7 @@ export function Hero() {
             className="bg-white text-xl py-1 mt-10 text-black rounded-full 
                        border border-white hover:border-white 
                        focus:border-white active:border-white"
+                       onPress={handleButtonPress}
           >
             Let&apos;s connect
           </Button>
