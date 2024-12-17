@@ -1,53 +1,61 @@
 'use client'
-import React from "react";
-import { Button } from "@nextui-org/react";
+import React from 'react'
+import { Button } from '@nextui-org/react'
 // import confetti from "canvas-confetti";
-import { Typography } from "../common/Typography";
-import useScrollToSection from "../hooks/SmoothScroll";
+import { motion } from 'framer-motion'
+import { Typography } from '../common/Typography'
+import useScrollToSection from '../hooks/SmoothScroll'
+import { HeroHighlight, Highlight } from '../components/ui/hero-highlight'
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export function Hero() {
-
-  const { scrollToSection } = useScrollToSection();
+  const { scrollToSection } = useScrollToSection()
 
   function handleButtonPress() {
-    scrollToSection('contact', 2500);
+    scrollToSection('contact', 2500)
   }
 
   return (
     <div className="">
-      <div className="w-full mt-20 z-50 flex flex-col items-center justify-center px-4 text-center">
-        <div className="text-white font-medium text-4xl md:text-5xl space-y-3">
-          <Typography variant="hero" displayAs="h1" className="">
-            Code, Create, Innovate:
-          </Typography>
-          <Typography variant="hero" displayAs="h1" className="">
-            Your Full Stack
-          </Typography>
-          <div className="bg-[#0a0a0a] py-3 px-6">
+      <div className="z-50 mt-20 flex w-full flex-col items-center justify-center px-4 text-center">
+        <HeroHighlight>
+            <div className="space-y-3 text-4xl font-medium text-white md:text-5xl">
             <Typography variant="hero" displayAs="h1" className="">
-              Development Partner
+              Code, Create, Innovate:
             </Typography>
+            <Typography variant="hero" displayAs="h1" className="">
+              Your Full Stack
+            </Typography>
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: [20, -5, 0],
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0.0, 0.2, 1],
+              }}
+              className="mx-auto max-w-4xl px-4 text-center text-2xl font-bold leading-relaxed text-neutral-700 md:text-4xl lg:text-5xl lg:leading-snug dark:text-white"
+            >
+              <Highlight className="text-black dark:text-white">Development Partner</Highlight>
+            </motion.h1>
           </div>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row sm:gap-3 mt-10">
-          <Button 
-            className="bg-white text-xl py-1 mt-10 text-black rounded-full 
-                       border border-white hover:border-white 
-                       focus:border-white active:border-white"
-                       onPress={handleButtonPress}
-          >
-            Let&apos;s connect
-          </Button>
-          <Button 
-            className="text-xl py-1 mt-4 sm:mt-10 text-white rounded-full 
-                       border border-white border-opacity-50 hover:border-opacity-100 
-                       focus:border-opacity-100 active:border-opacity-100"
-          >
-            Download my CV
-          </Button>
-        </div>
+          <div className="mt-10 flex flex-col items-center justify-center sm:flex-row sm:gap-3">
+            <Button
+              className="mt-10 rounded-full border border-white bg-white py-1 text-xl text-black hover:border-white focus:border-white active:border-white"
+              onPress={handleButtonPress}
+            >
+              Let&apos;s connect
+            </Button>
+            <Button className="mt-4 rounded-full border border-white border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10">
+              Download my CV
+            </Button>
+          </div>
+        </HeroHighlight>
       </div>
     </div>
   )

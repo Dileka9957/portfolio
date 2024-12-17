@@ -1,19 +1,16 @@
-"use client";
-import { cn } from "@/app/lib/util";
-import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../components/ui/navbar-menu";
-import Image from "next/image";
-
+'use client'
+import { cn } from '@/app/lib/util'
+import React, { useState } from 'react'
+import { HoveredLink, Menu, MenuItem, ProductItem } from '../components/ui/navbar-menu'
+import Image from 'next/image'
 
 export default function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<string | null>(null)
   return (
-    <div
-      className={cn("mt-10 mx-auto z-50 max-w-[460px] sm:max-w-[580px]", className)}
-    >
+    <div className={cn('z-50 mx-auto mt-10 max-w-[460px] sm:max-w-[580px]', className)}>
       <Menu setActive={setActive}>
         <Image
-          className="dark:invert top-10"
+          className="top-10 dark:invert"
           src="/next.svg"
           alt="Next.js logo"
           width={120}
@@ -66,5 +63,5 @@ export default function Navbar({ className }: { className?: string }) {
         </MenuItem>
       </Menu>
     </div>
-  );
+  )
 }
