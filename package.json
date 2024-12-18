@@ -18,10 +18,10 @@
     "framer-motion": "^11.14.4",
     "lucide-react": "^0.468.0",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "15.1.0",
+    "next": "15.1.1",
     "radix-ui": "^1.0.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-intersection-observer": "^9.14.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
@@ -30,11 +30,11 @@
     "@eslint/eslintrc": "^3",
     "@types/canvas-confetti": "^1.6.4",
     "@types/node": "^20",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.2",
     "@types/tailwindcss": "^3.0.11",
     "eslint": "^9.17.0",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "15.1.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
@@ -43,5 +43,9 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.2"
   }
 }
