@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { Typography } from '../common/Typography'
 import Image from 'next/image'
 import { Timeline } from '../components/ui/timeline'
 
@@ -151,16 +150,7 @@ export function Experience() {
   ]
   return (
     <div className="w-full">
-      <div className="container mx-auto max-w-[1440px]">
-      <Typography variant="title" className="mb-4">
-          Working Experience
-        </Typography>
-        <Typography variant="body2" className="mb-10 max-w-[600px]">
-          As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I
-          aim to assist you in constructing the brand of your fantasies.
-        </Typography>
-        <Timeline data={data} />
-      </div>
+      <Timeline data={data} />
     </div>
   )
 }

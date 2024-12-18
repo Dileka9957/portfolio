@@ -28,7 +28,7 @@ const textVariants = cva('', {
       hero: 'font-normal text-hero_sm md:text-hero leading-[1.2]',
       section_heading: 'text-[20px] text-slate-900 capitalize',
       form_section_title: 'text-[18px] font-semibold text-slate-900 capitalize',
-      title: 'font-medium tracking-tight text-h1_sm md:text-h1 leading-[1.1]',
+      title: 'font-semibold tracking-normal text-h1_sm md:text-h1 leading-[1.1]',
       title2: 'font-syne text-h2 font-bold tracking-tight md:text-h2_sm leading-[1.1]',
       heading: '~text-2xl/3xl capitalize font-semibold ',
       sub_heading: 'text-md font-normal',

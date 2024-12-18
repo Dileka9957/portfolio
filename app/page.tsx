@@ -9,11 +9,11 @@ import { Projects } from './components/projects/Projects'
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-[1440px]">
+    <div className="mx-auto w-full">
       {/* <BackgroundGradientAnimation> */}
       <ScrollToTop />
       <div>
-        <div className="mx-auto w-full max-w-4xl overflow-hidden">
+        <div className="mx-auto w-full max-w-[1440px] overflow-hidden">
           <Navbar />
         </div>
 
