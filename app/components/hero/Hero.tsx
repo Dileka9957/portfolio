@@ -1,18 +1,24 @@
 'use client'
 import React from 'react'
 import { Button } from '@nextui-org/react'
-// import confetti from "canvas-confetti";
+import confetti from "canvas-confetti";
 import { motion } from 'framer-motion'
 import { Typography } from '../common/Typography'
 import useScrollToSection from '../hooks/SmoothScroll'
 import { HeroHighlight, Highlight } from '../components/ui/hero-highlight'
-// import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export function Hero() {
   const { scrollToSection } = useScrollToSection()
 
   function handleButtonPress() {
     scrollToSection('contact', 2500)
+  }
+  function handleConfetti() {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
   }
 
   return (
@@ -51,7 +57,10 @@ export function Hero() {
             >
               Let&apos;s connect
             </Button>
-            <Button className="mt-4 rounded-full border border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10">
+            <Button 
+              className="mt-4 rounded-full border border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10"
+              onPress={handleConfetti}
+            >
               Download my CV
             </Button>
           </div>
