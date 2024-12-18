@@ -2,6 +2,7 @@
 
 import { ScrollToTop } from './components/common/ScrollTop'
 import { Contact } from './components/contactus/Contact'
+import { GlobeDemo } from './components/contactus/Globe'
 import { Experience } from './components/experience/Experience'
 import { Hero } from './components/hero/Hero'
 import Navbar from './components/navbar/NavBar'

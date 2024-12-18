@@ -4,6 +4,7 @@ import { Label } from '../components/ui/label'
 import { Input } from '../components/ui/input'
 import { cn } from '@/app/lib/util'
 import { Typography } from '../common/Typography'
+import { GlobeDemo } from './Globe'
 
 export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,35 +12,45 @@ export function Contact() {
     console.log('Form submitted')
   }
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-bg-black p-4 md:rounded-2xl md:p-8 dark:bg-black">
-      <Typography variant="title" className="mb-4">
-        Let&apos;s Connect
-      </Typography>
+    <div className='w-full flex flex-col lg:flex-row'>
+      <div className="w-full lg:w-1/2 shadow-input rounded-none bg-bg-black p-4 md:rounded-2xl md:p-8 dark:bg-black">
+        <Typography variant="title" className="mb-4">
+          Let&apos;s Connect
+        </Typography>
 
-      <form className="my-8" onSubmit={handleSubmit}>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="firstname">Name</Label>
-          <Input id="firstname" placeholder="Tyler" type="text" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-        </LabelInputContainer>
+        <form className="my-8" onSubmit={handleSubmit}>
+          <LabelInputContainer className="mb-8">
+            <Label htmlFor="firstname">Name</Label>
+            <Input id="firstname" placeholder="Tyler" type="text" />
+          </LabelInputContainer>
+          <LabelInputContainer className="mb-8">
+            <Label htmlFor="email">Email Address</Label>
+            <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          </LabelInputContainer>
 
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword">Message</Label>
-          <Input id="twitterpassword" placeholder="Hello" type="text" />
-        </LabelInputContainer>
+          <LabelInputContainer className="mb-8">
+            <Label htmlFor="twitterpassword">Message</Label>
+            <Input id="twitterpassword" placeholder="Hello" type="text" />
+          </LabelInputContainer>
 
-        <button
-          className="bg-gradient-to-br relative group/btn from-zinc-800 dark:from-zinc-900 dark:to-zinc-800 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Send
-          <BottomGradient />
-        </button>
+          <div className='w-full flex justify-end'>
+          <button
+            className="bg-gradient-to-br relative group/btn from-zinc-800 dark:from-zinc-900 dark:to-zinc-800 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            type="submit"
+          >
+            Send
+            <BottomGradient />
+          </button>
 
-      </form>
+          </div>
+          
+        </form>
+      </div>
+            
+      <div className='w-full lg:w-1/2'>
+        <GlobeDemo/>
+      </div>
+
     </div>
   )
 }
