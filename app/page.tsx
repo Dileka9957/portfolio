@@ -1,11 +1,11 @@
 // import { BackgroundGradientAnimation } from "./components/components/ui/background-gradient-animation";
 
+import { AboutUs } from './components/about/AboutUs'
 import { ScrollToTop } from './components/common/ScrollTop'
 import { Contact } from './components/contactus/Contact'
-import { GlobeDemo } from './components/contactus/Globe'
 import { Experience } from './components/experience/Experience'
 import { Hero } from './components/hero/Hero'
-import Navbar from './components/navbar/NavBar'
+import { FloatingNavDemo } from './components/navbar/FloatingNavBar'
 import { Projects } from './components/projects/Projects'
 
 export default function Home() {
@@ -14,11 +14,15 @@ export default function Home() {
       {/* <BackgroundGradientAnimation> */}
       <ScrollToTop />
       <div>
-        <div className="mx-auto w-full max-w-[1440px] overflow-hidden">
-          <Navbar />
+        <div className="mx-auto w-full max-w-[1440px] overflow-hidden pb-40 sm:pb-[48px] px-4">
+          <FloatingNavDemo/>
         </div>
 
         <Hero />
+
+        <div className="top-gap bottom-gap">
+          <AboutUs />
+        </div>
 
         <div className="top-gap bottom-gap">
           <Projects />
