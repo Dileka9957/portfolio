@@ -20,7 +20,7 @@ export default function Home() {
 
         <Hero />
 
-        <div className="top-gap bottom-gap">
+        <div className="top-gap">
           <AboutUs />
         </div>
 
