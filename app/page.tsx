@@ -13,7 +13,7 @@ export default function Home() {
 
       <ScrollToTop />
       <div>
-        <div className="mx-auto w-full max-w-[1440px] overflow-hidden pb-40 sm:pb-[48px] px-4">
+        <div className="mx-auto w-full max-w-[1440px] overflow-hidden pb-[12px] sm:pb-[48px] px-4">
           <FloatingNavDemo/>
         </div>
 
@@ -29,9 +29,9 @@ export default function Home() {
 
         <Experience />
 
-        {/* <div className="top-gap bottom-gap" id="contact">
+        <div className="top-gap bottom-gap" id="contact">
           <Contact />
-        </div> */}
+        </div>
       </div>
     </div>
   )
