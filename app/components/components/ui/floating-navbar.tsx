@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Typography } from "../../common/Typography";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const FloatingNav = ({
   navItems,
@@ -68,14 +68,15 @@ export const FloatingNav = ({
             backdropFilter: "blur(3px)",
             border: "1px solid rgba(255, 255, 255, 0.3)"
         }}
-      > <Image
+      > 
+        {/* <Image
                 className="top-10 invert"
                 src="/next.svg"
                 alt="Next.js logo"
                 width={120}
                 height={28}
                 priority
-              />
+          /> */}
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
