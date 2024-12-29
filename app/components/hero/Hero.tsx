@@ -52,13 +52,13 @@ export function Hero() {
           </div>
           <div className="mt-10 flex flex-col items-center justify-center sm:flex-row sm:gap-3">
             <Button
-              className="mt-10 rounded-full border w-[200px] border-white bg-white py-1 text-xl text-black hover:border-white focus:border-white active:border-white"
+              className="mt-10 rounded-full border w-[250px] border-white bg-white py-1 text-xl text-black hover:border-white focus:border-white active:border-white"
               onPress={handleButtonPress}
             >
               Let&apos;s connect
             </Button>
             <Button 
-              className="mt-4 rounded-full border w-[200px] border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10"
+              className="mt-4 rounded-full border w-[250px] border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10"
               onPress={handleConfetti}
             >
               Download my CV

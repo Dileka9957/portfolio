@@ -55,7 +55,7 @@ export function AboutUs() {
       className='w-full md:w-1/2'
    
     >
-      <div className="w-full mx-auto flex justify-center relative overflow-hidden rounded-lg">
+      {/* <div className="w-full mx-auto flex justify-center relative overflow-hidden rounded-lg">
             <Image
               src={intro}
               alt="intro image 1"
@@ -63,7 +63,7 @@ export function AboutUs() {
               height={400}
               className="w-2/3 h-2/3 object-cover rounded-lg aspect-square sticky top-[100px] transition-transform duration-300 ease-in-out hover:scale-105"
             />
-        </div>
+      </div> */}
     </motion.div>
     <div className="w-full md:w-1/2  mb-10">
           <div className="flex flex-col justify-center items-center px-5 mx-auto">
@@ -90,12 +90,12 @@ export function AboutUs() {
               </div>
             </div>
       
-            <div className="flex items-center justify-center mt-10 w-full">
+            {/* <div className="flex items-center justify-center mt-10 w-full">
               <FloatingDock
                 mobileClassName="translate-y-20" 
                 items={links}
               />
-            </div>
+            </div> */}
       </div>
     </div>
   )

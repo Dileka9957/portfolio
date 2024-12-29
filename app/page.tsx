@@ -19,9 +19,9 @@ export default function Home() {
 
         <Hero />
 
-        {/* <div className="top-gap">
+        <div className="top-gap">
           <AboutUs />
-        </div> */}
+        </div>
 
         <div className="top-gap bottom-gap">
           <Projects />
