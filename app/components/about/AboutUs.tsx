@@ -90,12 +90,12 @@ export function AboutUs() {
               </div>
             </div>
       
-            {/* <div className="flex items-center justify-center mt-10 w-full">
+            <div className="flex items-center justify-center mt-10 w-full">
               <FloatingDock
                 mobileClassName="translate-y-20" 
                 items={links}
               />
-            </div> */}
+            </div>
       </div>
     </div>
   )
