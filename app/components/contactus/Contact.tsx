@@ -47,9 +47,11 @@ export function Contact() {
         </form>
       </div>
             
-      <div className='w-full lg:w-1/2'>
-        <GlobeDemo/>
-      </div>
+      <div className="w-full lg:w-1/2 min-h-[400px] md:min-h-[600px]">
+          <div className="w-full h-full">
+            <GlobeDemo />
+          </div>
+        </div>
 
     </div>
   )
