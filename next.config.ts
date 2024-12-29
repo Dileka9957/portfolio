@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['assets.aceternity.com', 'aceternity.com','images.unsplash.com'],
   },
-  output:"export"
 }
 
 export default nextConfig

@@ -1,4 +1,3 @@
-// import { BackgroundGradientAnimation } from "./components/components/ui/background-gradient-animation";
 
 import { AboutUs } from './components/about/AboutUs'
 import { ScrollToTop } from './components/common/ScrollTop'
@@ -11,7 +10,7 @@ import { Projects } from './components/projects/Projects'
 export default function Home() {
   return (
     <div className="mx-auto w-full">
-      {/* <BackgroundGradientAnimation> */}
+
       <ScrollToTop />
       <div>
         <div className="mx-auto w-full max-w-[1440px] overflow-hidden pb-40 sm:pb-[48px] px-4">
@@ -33,8 +32,6 @@ export default function Home() {
         <div className="top-gap bottom-gap" id="contact">
           <Contact />
         </div>
-
-        {/* </BackgroundGradientAnimation> */}
       </div>
     </div>
   )
