@@ -19,9 +19,9 @@ export default function Home() {
 
         <Hero />
 
-        <div className="top-gap">
+        {/* <div className="top-gap">
           <AboutUs />
-        </div>
+        </div> */}
 
         <div className="top-gap bottom-gap">
           <Projects />
@@ -29,9 +29,9 @@ export default function Home() {
 
         <Experience />
 
-        <div className="top-gap bottom-gap" id="contact">
+        {/* <div className="top-gap bottom-gap" id="contact">
           <Contact />
-        </div>
+        </div> */}
       </div>
     </div>
   )
