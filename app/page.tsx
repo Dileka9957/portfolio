@@ -6,6 +6,7 @@ import { Experience } from './components/experience/Experience'
 import { Hero } from './components/hero/Hero'
 import { FloatingNavDemo } from './components/navbar/FloatingNavBar'
 import { Projects } from './components/projects/Projects'
+import { Skills } from './components/skills/Skills'
 
 export default function Home() {
   return (
@@ -13,15 +14,13 @@ export default function Home() {
 
       <ScrollToTop />
       <div>
-        <div className="mx-auto w-full max-w-[1440px] overflow-hidden pb-[12px] sm:pb-[48px] px-4">
-          <FloatingNavDemo/>
-        </div>
-
         <Hero />
 
-        <div className="top-gap">
+        <div className="top-gap bottom-gap">
           <AboutUs />
         </div>
+
+        <Skills/>
 
         <div className="top-gap bottom-gap">
           <Projects />

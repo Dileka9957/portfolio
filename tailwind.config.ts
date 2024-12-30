@@ -89,7 +89,8 @@ export default {
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',
-  			shimmer: 'shimmer 2s linear infinite'
+  			shimmer: 'shimmer 2s linear infinite',
+			scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
   		},
   		keyframes: {
   			moveHorizontal: {
@@ -132,7 +133,12 @@ export default {
   				to: {
   					backgroundPosition: '-200% 0'
   				}
-  			}
+  			},
+			scroll: {
+				to: {
+				  transform: "translate(calc(-50% - 0.5rem))",
+				},
+			  },
   		}
   	
   	}

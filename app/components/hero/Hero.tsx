@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { Typography } from '../common/Typography'
 import useScrollToSection from '../hooks/SmoothScroll'
 import { HeroHighlight, Highlight } from '../components/ui/hero-highlight'
+import { FloatingNavDemo } from '../navbar/FloatingNavBar';
 
 export function Hero() {
   const { scrollToSection } = useScrollToSection()
@@ -23,9 +24,12 @@ export function Hero() {
 
   return (
     <div className="">
-      <div className="z-50 mt-20 flex w-full flex-col items-center justify-center px-4 text-center">
+      <div className="z-50 flex w-full flex-col items-center justify-center text-center">
         <HeroHighlight>
-          <div className="space-y-3 text-4xl font-medium text-white md:text-5xl">
+        <div className="mx-auto w-full overflow-hidden pb-[12px] sm:pb-[48px] px-4">
+          <FloatingNavDemo/>
+        </div>
+          <div className="space-y-3 text-4xl font-medium text-white md:text-5xl mt-10">
             <Typography variant="hero" displayAs="h1" className="">
               Code, Create, Innovate:
             </Typography>
@@ -50,15 +54,15 @@ export function Hero() {
               <Highlight className="text-white dark:text-white">Development Partner</Highlight>
             </motion.h1>
           </div>
-          <div className="mt-10 flex flex-col items-center justify-center sm:flex-row sm:gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-center sm:flex-row gap-2 sm:gap-3">
             <Button
-              className="mt-10 rounded-full border w-[240px] border-white bg-white py-1 text-xl text-black hover:border-white focus:border-white active:border-white"
+              className="mt-2 rounded-full border w-[180px] border-white bg-white py-1 text-black hover:border-white focus:border-white active:border-white"
               onPress={handleButtonPress}
             >
               Let&apos;s connect
             </Button>
             <Button 
-              className="mt-4 rounded-full border w-[240px] border-white bg-black border-opacity-50 py-1 text-xl text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-10"
+              className="mt-2 rounded-full border w-[180px] border-white bg-black border-opacity-50 py-1 text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-2"
               onPress={handleConfetti}
             >
               Download my CV
