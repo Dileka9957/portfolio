@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/components/hooks/SmoothScroll.ts"
-  ],
+, "next.config.js"  ],
   "exclude": ["node_modules"]
 }
