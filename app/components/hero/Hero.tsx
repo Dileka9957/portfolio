@@ -14,13 +14,19 @@ export function Hero() {
   function handleButtonPress() {
     scrollToSection('contact', 2500)
   }
-  function handleConfetti() {
+
+  const downloadCV = () => {
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 }
     });
-  }
+
+    setTimeout(() => {
+      const link = "https://drive.google.com/file/d/1RKy6BQqetHg28Zux5kDYCZmVs9JV21Jq/view?usp=drive_link";
+      window.open(link, "_blank");
+    }, 1000);
+  };
 
   return (
     <div className="">
@@ -63,7 +69,7 @@ export function Hero() {
             </Button>
             <Button 
               className="mt-2 rounded-full border w-[180px] border-white bg-black border-opacity-50 py-1 text-white hover:border-opacity-100 focus:border-opacity-100 active:border-opacity-100 sm:mt-2"
-              onPress={handleConfetti}
+              onPress={downloadCV}
             >
               Download my CV
             </Button>

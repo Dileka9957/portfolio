@@ -5,12 +5,51 @@ import { Input } from '../components/ui/input'
 import { cn } from '@/app/lib/util'
 import { Typography } from '../common/Typography'
 import { GlobeDemo } from './Globe'
+import toast from 'react-hot-toast'
+import { useForm } from "react-hook-form";
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('Form submitted')
-  }
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>();
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          senderEmail: data.email,
+          message: `Message from ${data.name}: ${data.message}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
+
+      toast.success("Message sent successfully!");
+      reset(); // Clear form after successful submission
+    } catch (error) {
+      toast.error(
+        error instanceof Error ? error.message : "Failed to send message"
+      );
+    }
+  };
+
   return (
     <div className='w-full flex flex-col lg:flex-row'>
       <div className="w-full lg:w-1/2 shadow-input rounded-none bg-bg-black p-4 md:rounded-2xl md:p-8 dark:bg-black">
@@ -18,19 +57,52 @@ export function Contact() {
           Let&apos;s Connect
         </Typography>
 
-        <form className="my-8" onSubmit={handleSubmit}>
+        <form className="my-8" onSubmit={handleSubmit(onSubmit)}>
           <LabelInputContainer className="mb-8">
             <Label htmlFor="firstname">Name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input
+                id="name"
+                placeholder="Tyler"
+                {...register("name", { required: "Name is required" })}
+              />
+              {errors.name && (
+                <span className="text-red-500 text-sm">
+                  {errors.name.message}
+                </span>
+              )}
           </LabelInputContainer>
           <LabelInputContainer className="mb-8">
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+            <Input 
+            id="email" 
+            placeholder="projectmayhem@fc.com" 
+            {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Invalid email address",
+                  },
+                })} 
+            />
+            {errors.email && (
+              <span className="text-red-500 text-sm">
+                {errors.email.message}
+              </span>
+            )}
           </LabelInputContainer>
 
           <LabelInputContainer className="mb-8">
             <Label htmlFor="twitterpassword">Message</Label>
-            <Input id="twitterpassword" placeholder="Hello" type="text" />
+            <Input
+                id="message"
+                placeholder="Hello"
+                {...register("message", { required: "Message is required" })}
+              />
+              {errors.message && (
+                <span className="text-red-500 text-sm">
+                  {errors.message.message}
+                </span>
+              )}
           </LabelInputContainer>
 
           <div className='w-full flex justify-end'>
