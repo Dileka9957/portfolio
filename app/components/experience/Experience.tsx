@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Timeline } from '../components/ui/timeline'
+import { Typography } from '../common/Typography'
 
 export function Experience() {
   const data = [
@@ -9,6 +10,9 @@ export function Experience() {
       title: '2024',
       content: (
         <div>
+            <Typography variant="title" className="mb-10">
+              Associate Software Engineer - CodeSec Global
+            </Typography>
           <p className="mb-8 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
             Built and launched Aceternity UI and Aceternity UI Pro from scratch
           </p>
@@ -46,9 +50,12 @@ export function Experience() {
       ),
     },
     {
-      title: 'Early 2023',
+      title: '2023',
       content: (
         <div>
+            <Typography variant="title" className="mb-10">
+              Trainee Software Engineer - BiG ZKOOP
+            </Typography>
           <p className="mb-8 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
             I usually run out of copy, but when I see content this big, I try to integrate lorem
             ipsum.
@@ -91,9 +98,12 @@ export function Experience() {
       ),
     },
     {
-      title: 'Changelog',
+      title: '2022',
       content: (
         <div>
+            <Typography variant="title" className="mb-10">
+              Intern Software Engineer - iTexphere Solutions
+            </Typography>
           <p className="mb-4 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
             Deployed 5 new components on Aceternity today
           </p>

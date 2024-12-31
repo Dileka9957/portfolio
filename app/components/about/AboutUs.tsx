@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { IconBrandGithub, IconBrandLinkedin, IconBrandX } from '@tabler/icons-react';
 import { FloatingDock } from '../components/ui/floating-dock';
 import Image from 'next/image';
-import intro from '../../../public/intro.webp'
+import intro from '../../../public/intro.jpg'
 import { Typewriter } from 'react-simple-typewriter';
 import { Typography } from '../common/Typography';
 
