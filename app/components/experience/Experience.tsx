@@ -8,6 +8,7 @@ import obsidian from '../../../public/images/experience/obsidian.png'
 import olanka from '../../../public/images/experience/olanka.png'
 import finderhost from '../../../public/images/experience/finderhost.png'
 import azrea from '../../../public/images/experience/azrea.png'
+import cisco from '../../../public/images/experience/ciscopoint.png'
 
 export function Experience() {
   const data = [
@@ -91,9 +92,9 @@ export function Experience() {
             <Typography variant="title" className="mb-10">
               Intern Software Engineer - iTexphere Solutions
             </Typography>
-          <p className="mb-4 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
-          </p>
+            <p className="mb-8 text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
+              Built UIs and contributed for API integration for following web applications.
+            </p>
         
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -104,7 +105,7 @@ export function Experience() {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://assets.aceternity.com/features-section.png"
+              src={cisco}
               alt="feature template"
               width={500}
               height={500}

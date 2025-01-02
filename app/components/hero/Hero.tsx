@@ -12,7 +12,7 @@ export function Hero() {
   const { scrollToSection } = useScrollToSection()
 
   function handleButtonPress() {
-    scrollToSection('contact', 2500)
+    scrollToSection('contact-section', 2500)
   }
 
   const downloadCV = () => {

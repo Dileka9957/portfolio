@@ -8,8 +8,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Typography } from "../../common/Typography";
-// import Image from "next/image";
+import useScrollToSection from "../../hooks/SmoothScroll";
 
 export const FloatingNav = ({
   navItems,
@@ -23,26 +22,29 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
+  const { scrollToSection } = useScrollToSection();
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+      setVisible(scrollYProgress.get() < 0.05 || direction < 0);
     }
   });
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+        /* Using scrollIntoView with smooth behavior for consistency */
+      });
+    }
+  };
+  
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -69,31 +71,20 @@ export const FloatingNav = ({
             border: "1px solid rgba(255, 255, 255, 0.3)"
         }}
       > 
-        {/* <Image
-                className="top-10 invert"
-                src="/next.svg"
-                alt="Next.js logo"
-                width={120}
-                height={28}
-                priority
-          /> */}
+
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
+            // scroll={false}
+            onClick={(e:any) => handleNavClick(e, navItem.link)}
             className={cn(
-              "relative dark:text-neutral-50 flex-col sm:flex-row items-start flex text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative flex-col sm:flex-row items-start flex dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
             )}
           >
             {/* <span className="block sm:hidden">{navItem.icon}</span> */}
-          
-            <Typography
-                variant="body2"
-                displayAs="p"
-                className="cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
-            >
                 {navItem.name}
-            </Typography>
+           
           </Link>
         ))}
     

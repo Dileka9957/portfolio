@@ -16,19 +16,23 @@ export default function Home() {
       <div>
         <Hero />
 
-        <div className="top-gap bottom-gap">
+        <div className="top-gap bottom-gap" id='about-section'>
           <AboutUs />
         </div>
 
+        <div className="top-gap bottom-gap" id='skills-section'>
         <Skills/>
-
-        <div className="top-gap bottom-gap">
-          <Projects />
         </div>
 
-        <Experience />
+        {/* <div className="top-gap bottom-gap">
+          <Projects />
+        </div> */}
 
-        <div className="top-gap" id="contact">
+        <div className="top-gap bottom-gap" id='projects-section'>
+          <Experience />
+        </div>
+
+        <div className="top-gap" id="contact-section">
           <Contact />
         </div>
       </div>
