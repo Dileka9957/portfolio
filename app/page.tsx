@@ -28,7 +28,7 @@ export default function Home() {
 
         <Experience />
 
-        <div className="top-gap bottom-gap" id="contact">
+        <div className="top-gap" id="contact">
           <Contact />
         </div>
       </div>

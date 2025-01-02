@@ -18,14 +18,14 @@ export function AboutUs() {
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-300 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/Dileka9957",
     },
     {
       title: "LinkedIn",
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-300 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://www.linkedin.com/in/nipun-dileka-b73530228/",
     },
     {
       title: "Twitter",
@@ -51,16 +51,16 @@ export function AboutUs() {
         y: 0,
       }}
       viewport={{ once: true }}
-      className='w-full lg:w-1/2'
+      className='w-full lg:w-1/2 rounded-lg'
    
     >
-      <div className="w-full mx-auto flex justify-center relative overflow-hidden rounded-lg">
+      <div className="w-auto h-full mx-auto flex justify-center relative overflow-hidden !rounded-lg">
             <Image
               src={intro}
               alt="intro"
               width={400}
               height={400}
-              className="h-2/3 object-cover rounded-lg aspect-[1.1] sticky top-[100px] transition-transform duration-300 ease-in-out hover:scale-105"
+              className="object-cover rounded-lg aspect-[1.1] sticky top-[100px] transition-transform duration-300 ease-in-out hover:scale-105"
             />
       </div>
     </motion.div>
