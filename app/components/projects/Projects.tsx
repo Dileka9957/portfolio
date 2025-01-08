@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { Typography } from '../common/Typography'
-import Card from '../common/Card'
+import CardsGrid from '../common/Card'
 
 
 export function Projects() {
@@ -16,10 +16,8 @@ export function Projects() {
         aim to assist you in constructing the brand of your fantasies.
       </Typography>
       {/* <HeroParallax products={products} /> */}
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-      <Card/><Card/><Card/><Card/><Card/><Card/>
-    </div>
+      <CardsGrid/>
+   
     </div>
   )
 }

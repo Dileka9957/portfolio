@@ -20,15 +20,15 @@ export default function Home() {
           <AboutUs />
         </div>
 
-        <div className="top-gap bottom-gap" id='skills-section'>
+        <div id='skills-section'>
         <Skills/>
         </div>
 
-        {/* <div className="top-gap bottom-gap">
-          <Projects />
-        </div> */}
-
         <div className="top-gap bottom-gap" id='projects-section'>
+          <Projects />
+        </div>
+
+        <div id='experience-section'>
           <Experience />
         </div>
 

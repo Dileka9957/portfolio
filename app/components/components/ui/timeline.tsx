@@ -32,7 +32,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <div className="w-full bg-neutral-950 font-sans dark:bg-neutral-950" ref={containerRef}>
       <div className="container mx-auto top-gap">
               <Typography variant="title" className="mb-4">
-                Working Experience
+                Work Experience
               </Typography>
               <Typography variant="body2" className="mb-5 max-w-[600px] text-neutral-500">
               I've been working in the IT industry for the past 2 years. Here's a timeline of my journey.
