@@ -83,7 +83,7 @@ export function AboutUs() {
                     typeSpeed={100}
                     deleteSpeed={70}
                     delaySpeed={1000}
-                    words={["Developer", "Blogger", "Freelancer"]}
+                    words={["Developer", "Freelancer"]}
                   />
                 </span>
               </Typography>
