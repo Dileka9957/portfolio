@@ -4,9 +4,16 @@ import { ScrollToTop } from './components/common/ScrollTop'
 import { Contact } from './components/contactus/Contact'
 import { Experience } from './components/experience/Experience'
 import { Hero } from './components/hero/Hero'
-import { FloatingNavDemo } from './components/navbar/FloatingNavBar'
 import { Projects } from './components/projects/Projects'
 import { Skills } from './components/skills/Skills'
+
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Nipun Dileka - Portfolio',
+  description: 'Professional portfolio of Nipun Dileka - Full-Stack Developer',
+  keywords: ['Nipun Dileka', 'Dileka Nipun', 'Nipun portpolio', 'Nipun Dileka portfolio'],
+}
 
 export default function Home() {
   return (
