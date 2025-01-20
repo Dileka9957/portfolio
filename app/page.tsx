@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Nipun Dileka - Portfolio',
   description: 'Professional portfolio of Nipun Dileka - Full-Stack Developer',
   keywords: ['Nipun Dileka', 'Dileka Nipun', 'Nipun portpolio', 'Nipun Dileka portfolio'],
+  verification: {
+    google: 'LP_DJOMZrIoXWN6EFwjYwLKcZpzogeshq_uu3Te2NkQ',
+  }
 }
 
 export default function Home() {
