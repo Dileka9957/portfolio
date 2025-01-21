@@ -17,7 +17,7 @@ export function Experience() {
       title: '2024',
       content: (
         <div>
-            <Typography variant="title" className="mb-10">
+            <Typography variant="title" className="mb-10 text-[#ea580c]">
               Associate Software Engineer - CodeSec Global
             </Typography>
           <p className="text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
@@ -63,7 +63,7 @@ export function Experience() {
       title: '2023',
       content: (
         <div>
-            <Typography variant="title" className="mb-10">
+            <Typography variant="title" className="mb-10 text-[#ea580c]">
               Trainee Software Engineer - BiG ZKOOP
             </Typography>
             <p className="text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">
@@ -95,7 +95,7 @@ export function Experience() {
       title: '2022',
       content: (
         <div>
-            <Typography variant="title" className="mb-10">
+            <Typography variant="title" className="mb-10 text-[#ea580c]">
               Intern Software Engineer - iTexphere Solutions
             </Typography>
             <p className="text-xs font-normal text-neutral-200 md:text-sm dark:text-neutral-200">

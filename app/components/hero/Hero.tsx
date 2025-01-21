@@ -62,7 +62,7 @@ export function Hero() {
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center sm:flex-row gap-2 sm:gap-3">
             <Button
-              className="mt-2 rounded-full border w-[180px] border-white bg-white py-1 text-black hover:border-white focus:border-white active:border-white"
+              className="mt-2 rounded-full border w-[180px] border-[#ea580c] bg-[#ea580c] py-1 text-white hover:border-white focus:border-white active:border-white"
               onPress={handleButtonPress}
             >
               Let&apos;s connect

@@ -48,17 +48,17 @@ const testimonials = [
         name: "Redux",
       },
       {
-        src:'/images/skills/nextjs.png' ,
+        src:'/images/skills/nextjs.webp' ,
         name: "NextJS",
       },
       {
         src:'/images/skills/tailwind.png' ,
         name: "Tailwind CSS",
       },
-    //   {
-    //     src:'/images/skills/threejs.svg' ,
-    //     name: "Three JS",
-    //   },
+      {
+        src:'/images/skills/three-js.webp' ,
+        name: "Three JS",
+      },
       {
         src:'/images/skills/nodejs.png' ,
         name: "NodeJs",
@@ -66,6 +66,10 @@ const testimonials = [
       {
         src:'/images/skills/express-js.png' ,
         name: "Express JS",
+      },
+      {
+        src:'/images/skills/nestjs.png' ,
+        name: "Nest Js",
       },
       {
         src:'/images/skills/mongodb.png' ,

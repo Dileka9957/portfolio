@@ -61,11 +61,11 @@ export const InfiniteMovingCards = ({
   const getSpeed = () => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
+      } else if (speed === "normal") {
+        containerRef.current.style.setProperty("--animation-duration", "60s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "100s");
       }
     }
   };
@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
                     alt={item.name}
                     className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 sm:h-28 sm:w-28 pointer hover:scale-110 relative transition duration-500"
                   />
-                  <span className="text-center w-full hidden sm:block text-sm leading-[1.6] text-gray-400 font-normal">
+                  <span className="text-center w-full text-[10px] sm:text-sm leading-[1.6] text-gray-400 font-normal">
                     {item.name}
                   </span>
                 </span>

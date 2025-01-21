@@ -79,7 +79,7 @@ export const FloatingNav = ({
             // scroll={false}
             onClick={(e:any) => handleNavClick(e, navItem.link)}
             className={cn(
-              "relative flex-col sm:flex-row items-start flex dark:hover:text-neutral-300 hover:text-neutral-500 cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
+              "relative flex-col sm:flex-row items-start flex dark:hover:text-neutral-300 hover:text-[#ea580c] cursor-pointer text-white hover:opacity-[0.9] dark:text-white"
             )}
           >
             {/* <span className="block sm:hidden">{navItem.icon}</span> */}

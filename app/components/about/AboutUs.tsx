@@ -75,7 +75,7 @@ export function AboutUs() {
               </Typography>
               <Typography variant="title" displayAs="h1" className="!font-normal px-3 text-2">
                 I am a &nbsp;
-                <span className="fw-bold" style={{ color: "orange" }}>
+                <span className="fw-bold" style={{ color: "#ea580c" }}>
                   <Typewriter
                     loop
                     cursor

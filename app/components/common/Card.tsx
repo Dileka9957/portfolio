@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "Foodies App",
+    title: "Foodies",
     description: "A vibrant social media platform where food enthusiasts share reviews, culinary experiences.",
     image: '/images/projects/Gourmet Trio of Tacos on Blue Plate.jpeg',
     technologies: "React , Spring Boot , MySQL , JWT , MUI",
@@ -51,7 +51,7 @@ export default function CardsGrid() {
           <CardBody className="bg-black relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-white/[0.2] w-full h-auto rounded-xl p-3 sm:p-6 border">
             <CardItem
               translateZ="50"
-              className="text-xl font-bold text-white dark:text-white"
+              className="text-xl font-bold text-[#ea580c] dark:text-[#ea580c]"
             >
               {project.title}
             </CardItem>
@@ -83,7 +83,7 @@ export default function CardsGrid() {
               <CardItem
                 translateZ={20}
                 as="button"
-                className="px-4 py-2 rounded-xl bg-white dark:bg-white dark:text-black text-black text-xs font-bold"
+                className="px-4 py-2 rounded-xl bg-[#ea580c] dark:bg-[#ea580c] dark:text-black text-black text-xs font-bold"
               >
                 <Link href={project.githubLink}> GitHub</Link>
               </CardItem>

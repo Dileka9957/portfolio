@@ -396,7 +396,7 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="flex flex-row items-start justify-start h-screen md:h-auto dark:bg-black bg-black relative w-full">
+    <div className="flex flex-row items-start justify-start h-[75vh] md: md:h-auto dark:bg-black bg-black relative w-full">
       <div className="mx-auto w-full relative overflow-hidden h-full md:h-[40rem]">
         <motion.div
           initial={{
@@ -412,7 +412,7 @@ export function GlobeDemo() {
           }}
           className="div"
         ></motion.div>
-        <div className="absolute w-full bottom-20 inset-x-0 h-20 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-black z-20" />
+        <div className="absolute w-full bottom-10 md:bottom-20 inset-x-0 h-20 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-black z-20" />
         <div className="absolute w-full h-full bottom-0 md:bottom-10 z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>

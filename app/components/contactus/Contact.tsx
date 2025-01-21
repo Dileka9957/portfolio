@@ -134,7 +134,7 @@ export function Contact() {
       <div className='px-4 sm:px-8'>
         {/* <hr className='border-1'></hr> */}
         <div className="flex sm:flex-row flex-col-reverse justify-between items-center py-4">
-          <p className="md:text-base text-sm md:font-normal font-light mt-3">
+          <p className="md:text-base text-sm font-light mt-3">
             Copyright © {new Date().getFullYear()} Nipun Dileka
           </p>
           <div className="flex flex-wrap space-x-6 items-center">
