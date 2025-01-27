@@ -73,7 +73,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-[1440px] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative max-w-[1440px] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -87,21 +87,21 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[100px] max-w-full relative rounded-2xl border flex-shrink-0 border-slate-700 px-4 sm:px-8 py-6 md:w-[180px]"
+            className="w-[100px] max-w-full relative rounded-2xl border flex-shrink-0 border-slate-700 px-4 md:px-8 py-6 md:w-[180px]"
          
             key={item.name}
           >
             <blockquote>
-              <div className="relative z-20 flex flex-row justify-center items-center">
+              <div className="relative flex flex-row justify-center items-center">
                 <span className="flex flex-col gap-1">
                   <Image
                     height={100}
                     width={100}
                     src={item.src}
                     alt={item.name}
-                    className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 sm:h-28 sm:w-28 pointer hover:scale-110 relative transition duration-500"
+                    className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 md:h-28 md:w-28 pointer hover:scale-110 relative transition duration-500"
                   />
-                  <span className="text-center w-full text-[10px] sm:text-sm leading-[1.6] text-gray-400 font-normal">
+                  <span className="text-center w-full text-[10px] md:text-sm leading-[1.6] text-gray-400 font-normal">
                     {item.name}
                   </span>
                 </span>

@@ -6,8 +6,8 @@ import { InfiniteMovingCards } from '../components/ui/infinite-moving-cards'
 
 export function Skills() {
   return (
-    <div className="container">
-        <Typography variant="title" className="mb-4">
+    <div>
+        <Typography variant="title" className="mb-4 container">
             Skills
         </Typography>
         <div className="mt-6 rounded-md flex flex-col antialiased bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
@@ -79,7 +79,6 @@ const testimonials = [
         src:'/images/skills/postgresql.png' ,
         name: "PostgreSQL",
       },
-  
     
   ];
 

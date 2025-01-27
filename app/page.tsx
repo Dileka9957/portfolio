@@ -34,12 +34,12 @@ export default function Home() {
         <Skills/>
         </div>
 
-        <div className="top-gap bottom-gap" id='projects-section'>
-          <Projects />
-        </div>
-
-        <div id='experience-section'>
+        <div id='experience-section' className="top-gap bottom-gap">
           <Experience />
+        </div>
+        
+        <div  id='projects-section'>
+          <Projects />
         </div>
 
         <div className="top-gap" id="contact-section">
