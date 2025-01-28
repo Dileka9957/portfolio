@@ -12,10 +12,8 @@ export function Projects() {
         Personal Projects
       </Typography>
       <Typography variant="body2" className="mb-10 max-w-[600px]  text-neutral-600">
-        As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I
-        aim to assist you in constructing the brand of your fantasies.
+        Discover a selection of personal projects that showcase my creativity, technical skills, and passion for crafting impactful digital experiences.
       </Typography>
-      {/* <HeroParallax products={products} /> */}
       <CardsGrid/>
    
     </div>
