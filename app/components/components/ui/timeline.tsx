@@ -35,7 +35,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 Work Experience
               </Typography>
               <Typography variant="body2" className="mb-5 max-w-[600px] text-neutral-500">
-              I've been working in the IT industry for the past 2 years. Here's a timeline of my journey.
+              I've been working in the IT industry for the past 3 years. Here's a timeline of my journey.
               </Typography>
             </div>
       <div ref={ref} className="relative mx-auto max-w-7xl pb-20">

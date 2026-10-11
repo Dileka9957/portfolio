@@ -23,21 +23,25 @@ export function Skills() {
 
 const testimonials = [
     
-      {
-        src:'/images/skills/html.png' ,
-        name: "HTML",
-      },
-      {
-        src:'/images/skills/css.png' ,
-        name: "CSS",
-      },
-      {
-        src:'/images/skills/js.png' ,
-        name: "Javascript",
-      },
+      // {
+      //   src:'/images/skills/html.png' ,
+      //   name: "HTML",
+      // },
+      // {
+      //   src:'/images/skills/css.png' ,
+      //   name: "CSS",
+      // },
+      // {
+      //   src:'/images/skills/js.png' ,
+      //   name: "Javascript",
+      // },
       {
         src:'/images/skills/ts.png' ,
         name: "Typescript",
+      },
+        {
+        src:'/images/skills/go.png' ,
+        name: "Golang",
       },
       {
         src:'/images/skills/reactjs.png' ,
